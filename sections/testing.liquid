@@ -4,8 +4,6 @@
 
 {% for block in section.blocks %}
   <img src="{{ block.settings.image | image_url: 'master' }}" 
-    width="{{ block.settings.image.width }}"
-    height="{{ block.settings.image.height }}"
     />
 {% endfor %}
 
