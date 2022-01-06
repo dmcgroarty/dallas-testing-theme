@@ -1,12 +1,24 @@
+<link rel="stylesheet" href="{{ 'testing.css' | asset_url }}" media="print" onload="this.media='all'">
 
+<h3>{{ section.settings.heading }}</h3>
 
 {% for block in section.blocks %}
-  <img src="{{ block.settings.image_example | image_url: 'master' }}" />
+  <img src="{{ block.settings.image | image_url: 'master' }}" 
+    width="{{ block.settings.image.width }}"
+    height="{{ block.settings.image.height }}"
+    />
 {% endfor %}
 
 {% schema %}
 {
   "name": "testing",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading for section"
+    }
+  ],
   "blocks": [
     {
       "type": "image",
@@ -15,7 +27,7 @@
         {
           "type": "image_picker",
           "label": "Your image",
-          "id": "image_example"
+          "id": "image"
         }
       ]
     }
