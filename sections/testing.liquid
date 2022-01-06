@@ -3,13 +3,12 @@
 <h3>{{ section.settings.heading }}</h3>
 
 {% for block in section.blocks %}
-  <img src="{{ block.settings.image | image_url: 'master' }}" 
+  <img src="{{ block.settings.image | image_url: 'medium' }}" 
     width="{{ block.settings.image.width }}"
     height="{{ block.settings.image.height }}"
     />
 {% endfor %}
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" />
 {% schema %}
 {
   "name": "testing",
