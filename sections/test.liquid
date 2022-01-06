@@ -1,1 +1,20 @@
-<p>hello</p>
+<h3>{{ section.settings.heading }}</h3>
+<p>{{ section.settings.description }}</p>
+
+{% schema %}
+{
+  "name": "Test",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading for section"
+    },
+    {
+      "type": "text-rich",
+      "label": "description",
+      "id": "description"
+    }
+  ]
+}
+{% endschema %}
