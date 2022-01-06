@@ -1,0 +1,10 @@
+{
+    "sections": {
+        "main": {
+            "type": "testing"
+        }
+    },
+    "order": [
+        "main"
+    ]
+}
