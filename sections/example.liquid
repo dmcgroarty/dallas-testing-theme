@@ -20,14 +20,8 @@
 
 {% for product in collections['all'].products %}
    {% if section.settings.hide_product == false %}
-    <a class="product_link" href="{{ product.url }}" >
-        {{ product.title }} - 
-        {{ product.price | money }} 
-    {% if product.available == false %}
-        - Product Not Available!
-    {% endif %}
-    </a>
-	{% endif %}
+   {% render 'example-snippet', product: product %}
+   {% endif %}
 {% endfor %}
 
 {% schema %}

@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{ 'testing.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{% if product %}
+<a class="product_link" href="{{ product.url }}" >
+    {{ product.title }} -
+    {{ product.price | money }} 
+{% if product.available == false %}
+    - Product Not Available!
+{% endif %}
+</a>
+{% endif %}
