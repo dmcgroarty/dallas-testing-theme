@@ -1,14 +1,13 @@
 {
   "sections": {
-    "main" : {
+    "main": {
       "type": "testing",
       "settings": {
       }
     },
     "example": {
       "type": "example",
-      "settings:": {
-
+      "settings": {
       }
     }
   },
