@@ -19,7 +19,7 @@
 {% endfor %}
 
 {% for product in collections['all'].products %}
-   {% if section.settings.hide_product %}
+   {% if section.settings.hide_product == false %}
     <a class="product_link" href="{{ product.url }}" >
         {{ product.title }} - 
         {{ product.price | money }} 
